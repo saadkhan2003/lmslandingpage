@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "Do I need any technical skills or coding experience?",
     answer:
-      "No. The AI Tools Business Mastery course is designed for complete beginners. You don't need to know how to code, build websites, or have any technical background. We walk you through everything step by step.",
+      "No. The Ai Tools Business Mastery course is designed for complete beginners. You don't need to know how to code, build websites, or have any technical background. We walk you through everything step by step.",
   },
   {
     question: "How soon can I expect to make my first sale?",
@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "What if I don't make any money?",
     answer:
-      "We stand behind our system with a 30-day money-back guarantee. If you go through the material and don't see results, email us and we'll refund every cent.",
+      "We stand behind our system. If you go through the material and don't see results, contact us and we'll work with you to get you on track.",
   },
   {
     question: "Can I do this alongside my job or studies?",
@@ -53,13 +53,8 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="relative w-full overflow-hidden bg-neutral-950 py-20 md:py-28"
+      className="relative w-full overflow-hidden bg-neutral-950 py-16 sm:py-20 md:py-28"
     >
-      <div className="bg-grid-subtle pointer-events-none absolute inset-0" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/10 blur-3xl" />
-
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Badge className="mx-auto w-fit rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-sm font-semibold text-red-400 hover:bg-red-500/10">
@@ -69,22 +64,22 @@ export function FaqSection() {
             Frequently Asked{" "}
             <span className="text-gradient">Questions</span>
           </h2>
-          <p className="mt-4 text-lg text-white/60">
+          <p className="mt-4 text-base text-white/60 sm:text-lg">
             Everything you need to know before you join.
           </p>
         </div>
 
         <Accordion
-          className="mt-12 space-y-3"
+          className="mt-10 space-y-3 sm:mt-12"
           defaultValue={["item-0"]}
         >
           {faqs.map((faq, i) => (
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="rounded-xl border border-white/10 bg-white/5 px-5 transition-colors hover:border-white/20"
+              className="rounded-xl border border-white/10 bg-white/5 px-4 sm:px-5"
             >
-              <AccordionTrigger className="py-5 text-base font-semibold text-white hover:no-underline hover:text-red-400">
+              <AccordionTrigger className="py-4 text-sm font-semibold text-white hover:no-underline hover:text-red-400 sm:py-5 sm:text-base">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-sm leading-relaxed text-white/60">

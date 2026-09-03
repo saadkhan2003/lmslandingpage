@@ -27,18 +27,18 @@ const contact = [
 
 export function Footer() {
   return (
-    <footer className="relative w-full bg-neutral-950 py-14">
+    <footer className="relative w-full bg-neutral-950 py-10 sm:py-14">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-2 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="col-span-2 md:col-span-2 lg:col-span-1">
             <Link
               href="#"
               className="flex items-center gap-2 text-xl font-bold tracking-tight text-white"
             >
               <Image
                 src="/logo.png"
-                alt="AI Tools Mastery"
+                alt="Ai Tools Business Mastery"
                 width={40}
                 height={40}
                 className="h-8 w-8 rounded-lg object-contain"
@@ -57,7 +57,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Navigation
             </h3>
-            <nav className="mt-4 flex flex-col gap-3">
+            <nav className="mt-4 flex flex-col gap-2.5">
               {navigation.map((link) => (
                 <Link
                   key={link.label}
@@ -74,7 +74,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Legal
             </h3>
-            <nav className="mt-4 flex flex-col gap-3">
+            <nav className="mt-4 flex flex-col gap-2.5">
               {legal.map((link) => (
                 <Link
                   key={link.label}
@@ -91,7 +91,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Contact
             </h3>
-            <nav className="mt-4 flex flex-col gap-3">
+            <nav className="mt-4 flex flex-col gap-2.5">
               {contact.map((link) => (
                 <Link
                   key={link.label}
@@ -105,13 +105,13 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-10 bg-white/10" />
+        <Separator className="my-8 bg-white/10" />
 
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-white/50">
-            © 2026 AI Tools Mastery. All rights reserved.
+        <div className="flex flex-col items-center justify-between gap-3 text-center md:flex-row md:text-left">
+          <p className="text-xs text-white/50 sm:text-sm">
+            © 2026 Ai Tools Business Mastery. All rights reserved.
           </p>
-          <p className="text-sm text-white/50">
+          <p className="text-xs text-white/50 sm:text-sm">
             Built for beginners. Designed for your first sale.
           </p>
         </div>
