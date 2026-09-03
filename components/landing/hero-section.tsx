@@ -118,7 +118,7 @@ export function HeroSection() {
         </div>
 
         {/* Mentor image on mobile */}
-        <div className="relative -mt-2 h-[180px] w-full overflow-hidden">
+        <div className="relative -mt-8 h-[160px] w-full overflow-hidden">
           <Image
             src="/images/mentor.jpg"
             alt="Kashan Ahmad - Ai Tools Business Mastery"
