@@ -49,38 +49,39 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  /* Red / White / Black dark theme */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.577 0.245 27.325);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.577 0.245 27.325);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.577 0.245 27.325);
+  --chart-1: oklch(0.637 0.237 25.331);
+  --chart-2: oklch(0.577 0.245 27.325);
+  --chart-3: oklch(0.505 0.213 27.518);
+  --chart-4: oklch(0.708 0 0);
+  --chart-5: oklch(0.556 0 0);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.577 0.245 27.325);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.577 0.245 27.325);
 }
 
 .dark {
@@ -133,25 +134,33 @@
   .bg-grid {
     background-size: 40px 40px;
     background-image:
-      linear-gradient(to right, rgb(15 23 42 / 0.10) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(15 23 42 / 0.10) 1px, transparent 1px);
+      linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
   }
 
   .bg-grid-subtle {
     background-size: 40px 40px;
     background-image:
-      linear-gradient(to right, rgb(15 23 42 / 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(15 23 42 / 0.06) 1px, transparent 1px);
+      linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
   }
 
   .bg-dots {
     background-size: 24px 24px;
-    background-image: radial-gradient(rgb(15 23 42 / 0.12) 1px, transparent 1px);
+    background-image: radial-gradient(rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 40px -8px rgb(220 38 38 / 0.55);
+  }
+
+  .glow-red-lg {
+    box-shadow: 0 0 80px -12px rgb(220 38 38 / 0.5);
   }
 
   .gradient-border {
     position: relative;
-    background: white;
+    background: var(--card);
   }
 
   .gradient-border::before {
@@ -160,7 +169,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1.5px;
-    background: linear-gradient(135deg, rgb(16 185 129 / 0.4), rgb(245 158 11 / 0.4));
+    background: linear-gradient(135deg, rgb(239 68 68 / 0.7), rgb(239 68 68 / 0.15));
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
@@ -170,7 +179,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #0f172a 0%, #059669 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #ef4444 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

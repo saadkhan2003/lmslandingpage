@@ -1,54 +1,81 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Radio } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const benefits = [
-  "5-day action roadmap",
-  "Templates + bonuses",
-  "Lifetime access",
+  "First sale in just 3 days",
+  "FREE BOTs worth 10K each",
+  "Lifetime membership & access",
 ];
 
 export function FinalCta() {
   return (
-    <section className="relative w-full overflow-hidden bg-stone-50 py-20 md:py-28">
+    <section
+      id="pricing"
+      className="relative w-full overflow-hidden bg-black py-20 md:py-28"
+    >
       <div className="bg-grid pointer-events-none absolute inset-0" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-50 via-transparent to-stone-50" />
-      <div className="pointer-events-none absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-emerald-100/60 blur-3xl" />
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-amber-100/60 blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral-950 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-neutral-950 to-transparent" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/20 blur-3xl" />
 
-      <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
-          Ready to Start Your{" "}
-          <span className="text-gradient">AI Tools Business</span>?
-        </h2>
-        <p className="mx-auto mt-5 max-w-xl text-lg text-slate-600">
-          Join the AI Tools Business Mastery Program today and start building
-          your first income system with a clear step-by-step roadmap.
-        </p>
+      <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-3xl border border-red-600/30 bg-neutral-950 glow-red-lg">
+          <div className="relative">
+            <Image
+              src="/images/mentor.jpg"
+              alt="Claim your spot in the AI Tools Business Mastery 3-Day Challenge"
+              width={1200}
+              height={500}
+              className="aspect-[21/9] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
+          </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          {benefits.map((benefit) => (
-            <div
-              key={benefit}
-              className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm ring-1 ring-slate-100"
-            >
-              <CheckCircle className="h-4 w-4 text-emerald-600" />
-              {benefit}
+          <div className="-mt-16 px-6 pb-12 text-center sm:px-12">
+            <Badge className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-sm font-semibold text-red-400 hover:bg-red-500/10">
+              <Radio className="h-3.5 w-3.5" />
+              Recorded Session Available NOW
+            </Badge>
+            <h2 className="relative text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+              Claim Your{" "}
+              <span className="text-gradient">Spot Below</span>
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-lg text-white/70">
+              We challenge YOU to get your first AI Tools customer in just 3
+              days. Join AI Tools Business Mastery today and get instant access.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              {benefits.map((benefit) => (
+                <Badge
+                  key={benefit}
+                  variant="secondary"
+                  className="gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 hover:bg-white/5"
+                >
+                  <CheckCircle className="h-4 w-4 text-red-500" />
+                  {benefit}
+                </Badge>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <Button
-          asChild
-          size="lg"
-          className="mt-10 h-12 rounded-xl bg-slate-950 px-10 text-base font-semibold shadow-xl shadow-slate-900/10 transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-2xl"
-        >
-          <Link href="#pricing">
-            Enroll Now
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
+            <Button
+              asChild
+              className="mt-10 h-13 rounded-xl bg-red-600 px-10 text-base font-semibold text-white shadow-[0_0_50px_-8px_rgb(220_38_38/0.9)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
+            >
+              <Link href="/payment">
+                Save My First Spot
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <p className="mt-4 text-sm text-white/50">
+              Get Instant Access · Recorded Session Available NOW
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

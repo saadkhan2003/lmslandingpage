@@ -1,86 +1,42 @@
-import { BookOpen, Target, MessageCircle, TrendingUp } from "lucide-react";
-
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-const steps = [
-  {
-    number: "01",
-    title: "Learn AI Tools",
-    description:
-      "Understand the most useful AI tools and how they can solve real business problems.",
-    icon: BookOpen,
-  },
-  {
-    number: "02",
-    title: "Pick a High-Demand Service",
-    description:
-      "Choose a simple AI service that people and businesses are already willing to pay for.",
-    icon: Target,
-  },
-  {
-    number: "03",
-    title: "Find & Close Clients",
-    description:
-      "Learn how to reach potential clients, message them, and close your first deal.",
-    icon: MessageCircle,
-  },
-  {
-    number: "04",
-    title: "Earn, Improve & Scale",
-    description:
-      "Deliver the service, improve your offer, and grow your income step by step.",
-    icon: TrendingUp,
-  },
-];
+import { Badge } from "@/components/ui/badge";
 
 export function HowItWorks() {
   return (
-    <section id="program" className="relative w-full bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section
+      id="blueprint"
+      className="relative w-full overflow-hidden bg-neutral-950 py-20 md:py-28"
+    >
+      <div className="bg-grid-subtle pointer-events-none absolute inset-0" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" />
+      <div className="pointer-events-none absolute -top-20 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-red-600/10 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600">
-            Simple Process
-          </p>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
-            How The Program Works
+          <Badge className="mx-auto w-fit rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-sm font-semibold text-red-400 hover:bg-red-500/10">
+            The System
+          </Badge>
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl">
+            Your 3-Day Side Hustle{" "}
+            <span className="text-gradient">Blueprint</span>
           </h2>
-          <p className="mt-4 text-lg text-slate-600">
-            A simple step-by-step roadmap to help you go from beginner to
-            action-taker.
+          <p className="mt-4 text-lg text-white/60">
+            Watch the full blueprint walkthrough below.
           </p>
         </div>
 
-        <div className="relative mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Connecting line - desktop only */}
-          <div className="pointer-events-none absolute top-[3.5rem] left-0 hidden h-0.5 w-full bg-gradient-to-r from-emerald-100 via-emerald-200 to-emerald-100 lg:block" />
-
-          {steps.map((step, index) => (
-            <Card
-              key={step.number}
-              className="relative rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardHeader className="pb-3">
-                <div className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 ring-4 ring-white">
-                  <step.icon className="h-6 w-6 text-emerald-700" />
-                </div>
-                <div className="absolute right-5 top-5 text-4xl font-bold text-slate-100">
-                  {step.number}
-                </div>
-                <CardTitle className="text-xl font-semibold text-slate-950">
-                  {step.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">{step.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="mx-auto mt-16 max-w-4xl">
+          <div className="glow-red relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 p-2 sm:p-3">
+            <div className="relative w-full overflow-hidden rounded-xl" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://www.youtube.com/embed/jE9AfrMEcEk?si=FiWVE2OPtHkPgPxe"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full rounded-xl border-0"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

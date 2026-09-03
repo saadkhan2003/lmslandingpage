@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,13 +14,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Tools Business Mastery Program | Start Your AI Business in 5 Days",
+  title:
+    "AI Tools Business Mastery | Get Your First AI Tools Customer In Just 3 Days",
   description:
-    "Join the AI Tools Business Mastery Program and learn how to find high-demand AI services, close clients, and start building your first income stream with a simple 5-day roadmap.",
+    "We challenge YOU to get your first AI Tools customer in just 3 days. No coding. No big investment. No complicated business model. Just a step-by-step system to learn AI Tools, find customers, and start selling online.",
+  icons: {
+    icon: "/logo.png",
+  },
   openGraph: {
-    title: "AI Tools Business Mastery Program",
+    title: "AI Tools Business Mastery | The 3-Day Challenge",
     description:
-      "A practical beginner-friendly program to help you start an AI tools business, find clients, and build your first income system.",
+      "A step-by-step system to learn AI Tools, find customers, and get your first sale in just 3 days.",
     type: "website",
   },
 };
@@ -32,9 +37,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
+      className={`dark ${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        {children}
+      </body>
     </html>
   );
 }
