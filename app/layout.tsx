@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "We challenge YOU to get your first AI Tools customer in just 3 days. No coding. No big investment. No complicated business model. Just a step-by-step system to learn AI Tools, find customers, and start selling online.",
   icons: {
     icon: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     title: "AI Tools Business Mastery | The 3-Day Challenge",
