@@ -70,7 +70,7 @@ export async function POST(request: Request) {
     `;
 
     await transporter.sendMail({
-      from: process.env.SMTP_EMAIL,
+      from: `"Ai Tools Business Mastery" <${process.env.SMTP_EMAIL}>`,
       to: process.env.SMTP_TO || process.env.SMTP_EMAIL,
       subject: `💳 New Payment - ${name} (${paymentMethod})`,
       html,
