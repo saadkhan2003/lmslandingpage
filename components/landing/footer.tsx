@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 
 const navigation = [
   { label: "Home", href: "#" },
-  { label: "Blueprint", href: "#blueprint" },
+  { label: "Blueprint", href: "#outline" },
   { label: "Bonuses", href: "#bonuses" },
   { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },

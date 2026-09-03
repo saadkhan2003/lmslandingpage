@@ -91,7 +91,7 @@ export function ComparisonSection() {
                 asChild
                 className="h-12 w-full rounded-xl bg-red-600 font-semibold text-white shadow-[0_0_30px_-8px_rgb(220_38_38/0.7)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
               >
-                <Link href="#pricing">
+                <Link href="/payment">
                   Join The 3-Day Challenge
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

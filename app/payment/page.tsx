@@ -58,7 +58,6 @@ export default function PaymentPage() {
     email: "",
     city: "",
     paymentMethod: "",
-    transactionId: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -84,7 +83,7 @@ export default function PaymentPage() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hi! I just sent payment for the AI Tools Business Mastery course.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nTransaction ID: ${form.transactionId}\nPayment Method: ${form.paymentMethod}\n\nPlease verify my payment.`
+    `Hi! I just sent payment for the AI Tools Business Mastery course.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nPayment Method: ${form.paymentMethod}\n\nPlease verify my payment.`
   );
 
   if (submitted) {
@@ -113,7 +112,6 @@ export default function PaymentPage() {
               >
                 <Link
                   href={`https://wa.me/923189614122?text=${whatsappMessage}`}
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
@@ -307,28 +305,6 @@ export default function PaymentPage() {
                   </div>
                 </div>
 
-                {/* Transaction ID */}
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-white/70">
-                    Transaction ID / Reference Number
-                  </label>
-                  <div className="relative">
-                    <CreditCard className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/30" />
-                    <input
-                      type="text"
-                      value={form.transactionId}
-                      onChange={(e) =>
-                        setForm({ ...form, transactionId: e.target.value })
-                      }
-                      placeholder="Enter TID after sending payment"
-                      className="h-12 w-full rounded-xl border border-white/10 bg-white/5 pl-10 pr-4 text-sm text-white placeholder-white/30 outline-none transition-colors focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30"
-                    />
-                  </div>
-                  <p className="mt-1 text-xs text-white/40">
-                    Optional but helps us verify faster
-                  </p>
-                </div>
-
                 <Button
                   type="submit"
                   disabled={submitting}
@@ -452,7 +428,6 @@ export default function PaymentPage() {
                 >
                   <Link
                     href="https://wa.me/923189614122?text=Hi!%20I%20need%20help%20with%20the%20AI%20Tools%20course."
-                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     <MessageCircle className="mr-2 h-4 w-4" />

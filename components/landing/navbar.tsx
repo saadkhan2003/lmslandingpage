@@ -17,7 +17,7 @@ import { Separator } from "@/components/ui/separator";
 
 const navLinks = [
   { label: "Home", href: "#" },
-  { label: "Blueprint", href: "#blueprint" },
+  { label: "Blueprint", href: "#outline" },
   { label: "Bonuses", href: "#bonuses" },
   { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
@@ -61,7 +61,7 @@ export function Navbar() {
             asChild
             className="h-11 rounded-xl bg-red-600 px-6 font-semibold text-white shadow-[0_0_30px_-6px_rgb(220_38_38/0.7)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
           >
-            <Link href="/payment" target="_blank">Join The Challenge</Link>
+            <Link href="/payment">Join The Challenge</Link>
           </Button>
         </div>
 
@@ -110,7 +110,7 @@ export function Navbar() {
                 asChild
                 className="h-12 w-full rounded-xl bg-red-600 text-base font-semibold text-white hover:bg-red-500"
               >
-                <Link href="/payment" onClick={handleNavClick} target="_blank">
+                <Link href="/payment" onClick={handleNavClick}>
                   Join The Challenge
                 </Link>
               </Button>

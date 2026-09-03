@@ -57,7 +57,6 @@ export function CommunitySection() {
               >
                 <Link
                   href="https://chat.whatsapp.com/DBSZ6CMEMe5EXKiQK9eaE2"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Join Free

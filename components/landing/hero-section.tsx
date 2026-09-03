@@ -81,7 +81,7 @@ export function HeroSection() {
               asChild
               className="h-12 w-full rounded-xl bg-red-600 px-6 text-sm font-semibold text-white shadow-[0_0_40px_-8px_rgb(220_38_38/0.8)] transition-all hover:-translate-y-0.5 hover:bg-red-500 sm:h-13 sm:w-auto sm:px-8 sm:text-base"
             >
-              <Link href="#pricing">
+              <Link href="/payment">
                 Join AI Tools Business Mastery Today
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
