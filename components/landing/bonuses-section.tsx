@@ -148,11 +148,11 @@ export function BonusesSection() {
         <div className="flex justify-center">
           <Button
             asChild
-            className="h-13 rounded-xl bg-red-600 px-8 text-base font-semibold text-white shadow-[0_0_40px_-8px_rgb(220_38_38/0.8)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
+            className="h-16 rounded-xl bg-red-600 px-8 text-lg font-semibold text-white shadow-[0_0_40px_-8px_rgb(220_38_38/0.8)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
           >
             <Link href="/payment">
               Join The 3-Day Challenge
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>

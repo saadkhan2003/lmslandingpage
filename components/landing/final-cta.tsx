@@ -64,11 +64,11 @@ export function FinalCta() {
 
             <Button
               asChild
-              className="mt-10 h-13 rounded-xl bg-red-600 px-10 text-base font-semibold text-white shadow-[0_0_50px_-8px_rgb(220_38_38/0.9)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
+              className="mt-10 h-16 rounded-xl bg-red-600 px-10 text-lg font-semibold text-white shadow-[0_0_50px_-8px_rgb(220_38_38/0.9)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
             >
               <Link href="/payment">
                 Save My First Spot
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <p className="mt-4 text-sm text-white/50">

@@ -309,7 +309,7 @@ export default function PaymentPage() {
               <Button
                 type="submit"
                 disabled={submitting}
-                className="h-12 w-full rounded-xl bg-red-600 text-sm font-semibold text-white shadow-[0_0_40px_-8px_rgb(220_38_38/0.8)] transition-all hover:-translate-y-0.5 hover:bg-red-500 disabled:opacity-50 sm:h-13 sm:text-base"
+                className="h-14 w-full rounded-xl bg-red-600 text-base font-semibold text-white shadow-[0_0_40px_-8px_rgb(220_38_38/0.8)] transition-all hover:-translate-y-0.5 hover:bg-red-500 disabled:opacity-50 sm:h-16 sm:text-lg"
               >
                 {submitting ? (
                   "Submitting..."

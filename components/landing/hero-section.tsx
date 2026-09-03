@@ -79,20 +79,20 @@ export function HeroSection() {
           <div className="flex w-full flex-col gap-2.5 sm:w-auto sm:flex-row sm:gap-3">
             <Button
               asChild
-              className="h-11 w-full rounded-xl bg-red-600 px-5 text-sm font-semibold text-white shadow-[0_0_40px_-8px_rgb(220_38_38/0.8)] transition-all hover:-translate-y-0.5 hover:bg-red-500 sm:h-13 sm:w-auto sm:px-8 sm:text-base"
+              className="h-14 w-full rounded-xl bg-red-600 px-6 text-base font-semibold text-white shadow-[0_0_40px_-8px_rgb(220_38_38/0.8)] transition-all hover:-translate-y-0.5 hover:bg-red-500 sm:h-16 sm:w-auto sm:px-10 sm:text-lg"
             >
               <Link href="/payment">
                 Join Ai Tools Business Mastery Today
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button
               asChild
               variant="outline"
-              className="h-11 w-full rounded-xl border-white/20 bg-white/5 px-5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/10 sm:h-13 sm:w-auto sm:px-8 sm:text-base"
+              className="h-14 w-full rounded-xl border-white/20 bg-white/5 px-6 text-base font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/10 sm:h-16 sm:w-auto sm:px-10 sm:text-lg"
             >
               <Link href="#outline">
-                <PlayCircle className="mr-2 h-4 w-4" />
+                <PlayCircle className="mr-2 h-5 w-5" />
                 View Blueprint
               </Link>
             </Button>
