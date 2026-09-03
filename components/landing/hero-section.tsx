@@ -123,7 +123,7 @@ export function HeroSection() {
             src="/images/mentor.jpg"
             alt="Kashan Ahmad - Ai Tools Business Mastery"
             fill
-            className="object-cover object-right"
+            className="object-cover object-[center_20%]"
             priority
             sizes="100vw"
           />
