@@ -67,12 +67,12 @@ export function ComparisonSection() {
             </CardContent>
           </Card>
 
-          <Card className="relative overflow-visible rounded-2xl border-0 bg-neutral-900 ring-2 ring-red-600 glow-red">
-            <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-red-600 px-4 py-1 text-xs font-semibold text-white shadow-md">
+          <Card className="relative overflow-visible rounded-2xl border-0 bg-neutral-900 ring-2 ring-green-600 shadow-[0_0_30px_-6px_rgb(34_197_94/0.4)]">
+            <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-xs font-semibold text-white shadow-md">
               What Actually Works
             </div>
             <CardHeader className="border-b border-white/10 pb-4">
-              <Badge className="w-fit rounded-full border-red-500/40 bg-red-500/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red-300 hover:bg-red-500/20">
+              <Badge className="w-fit rounded-full border-green-500/40 bg-green-500/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-green-300 hover:bg-green-500/20">
                 New
               </Badge>
               <CardTitle className="pt-2 text-xl font-semibold text-white">
@@ -82,14 +82,14 @@ export function ComparisonSection() {
             <CardContent className="space-y-4 pt-6">
               {myModel.map((point) => (
                 <div key={point} className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-red-500" />
+                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-green-500" />
                   <span className="font-medium text-white">{point}</span>
                 </div>
               ))}
               <Separator className="bg-white/10" />
               <Button
                 asChild
-                className="h-12 w-full rounded-xl bg-red-600 font-semibold text-white shadow-[0_0_30px_-8px_rgb(220_38_38/0.7)] transition-all hover:-translate-y-0.5 hover:bg-red-500"
+                className="h-12 w-full rounded-xl bg-green-600 font-semibold text-white shadow-[0_0_30px_-8px_rgb(34_197_94/0.7)] transition-all hover:-translate-y-0.5 hover:bg-green-500"
               >
                 <Link href="/payment">
                   Join The 3-Day Challenge
